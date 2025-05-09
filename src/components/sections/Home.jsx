@@ -42,7 +42,6 @@ export const Home = () => {
                 </motion.h1>
             </div>
 
-            {/* Description Section */}
             <div
                 className="absolute bottom-20 md:bottom-10 right-5 md:right-10 text-right max-w-full md:max-w-xl px-4 md:px-0"
                 style={{

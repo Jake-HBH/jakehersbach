@@ -40,7 +40,7 @@ export const AboutPage = () => {
 
                 <div className="absolute top-5 left-5 md:top-10 md:left-10 text-left">
                     <motion.h1
-                        className="text-4xl md:text-[7rem] font-bold leading-none tracking-tight"
+                        className="text-4xl md:text-[6rem] font-bold leading-none tracking-tight"
                         initial={{ opacity: 0, x: -50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6 }}
@@ -49,7 +49,7 @@ export const AboutPage = () => {
                     </motion.h1>
                     <div className="h-1 w-12 md:w-20 bg-[#f0a500] my-2 md:my-4"></div>
                     <motion.h1
-                        className="text-4xl md:text-[7rem] font-bold leading-none tracking-tight"
+                        className="text-4xl md:text-[6rem] font-bold leading-none tracking-tight"
                         initial={{ opacity: 0, x: 50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6, delay: 0.2 }}

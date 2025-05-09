@@ -24,7 +24,6 @@ export const EaseOv = () => {
             <div className="absolute inset-0 bg-[#131313] pointer-events-none"></div>
 
             <div className="relative w-full mt-8 px-4 sm:px-8 z-10">
-                {/* Header Section */}
                 <div className="flex flex-col md:flex-row items-start justify-between gap-8 mb-16">
                     <div className="w-full md:w-1/2">
                         <h2 className="text-3xl sm:text-5xl font-bold mb-6 text-left" style={{ color: "#f0a500" }}>

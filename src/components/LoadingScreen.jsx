@@ -50,7 +50,6 @@ export const LoadingScreen = ({ onComplete }) => {
         }
     }, [done1, done2]);
 
-    // Slide out animation
     useEffect(() => {
         if (phase === "slideOut") {
             const duration = 600;
