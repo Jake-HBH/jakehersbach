@@ -1,30 +1,64 @@
-import {RevealOnScroll} from "../RevealOnScroll.jsx";
+import { MouseFollow } from "../MouseFollow.jsx";
+import { motion } from "framer-motion";
 
 export const Home = () => {
-    return <section id="home" className="min-h-screen flex items-center justify-center relative">
-<RevealOnScroll>
-        <div className="text-center z-10 px-4">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent leading-right">
-                Hi, I'm Jake.
-            </h1>
+    return (
+        <section
+            id="home"
+            className="min-h-screen flex flex-col items-center justify-center text-white relative overflow-hidden"
+            style={{
+                backgroundImage: "url('/jakehersbach/images/moses-rock.jpg')",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+            }}
+        >
+            <MouseFollow />
 
-            <p className="text-gray-400 text-lg mb-8 max-w-lg mx-auto">
-                "I'm a Creative Media & Game Technologies student passionate about developing innovative and
-                well-thought-out projects and applications. I thrive on brainstorming unique solutions, exploring
-                creative ideas, and bringing concepts to life.
-                With a strong eye for detail and a love for problem-solving, I enjoy blending technology and creativity
-                to craft engaging experiences that stand out."
-            </p>
-            <div className="flex justify-center space-x-4">
-                <a href="#projects" className="bg-blue-500 text-white py-3 px-6 rounded font-medium transition relative overflow-hidden hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59, 130, 246, 0.4)]">
-                   View Projects
-                </a>
+            <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-transparent pointer-events-none"></div>
 
-                <a href="#contact" className="border border-blue-500/50 text-blue-500 py-3 px-6 rounded font-medium transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59, 130, 246, 0.2)] hover:bg-blue-500/10">
-                    Contact Me
-                </a>
+            <div
+                className="absolute top-10 md:top-10 left-5 md:left-10 text-left"
+                style={{
+                    color: "#ffffff",
+                }}
+            >
+                <motion.h1
+                    className="text-4xl md:text-[7rem] font-bold leading-none tracking-tight"
+                    initial={{ opacity: 0, x: -50 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6 }}
+                >
+                    Creative
+                </motion.h1>
+                <div className="h-1 w-12 md:w-20 bg-[#f0a500] my-2 md:my-4"></div>
+                <motion.h1
+                    className="text-4xl md:text-[7rem] font-bold leading-none tracking-tight"
+                    initial={{ opacity: 0, x: 50 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, delay: 0.2 }}
+                >
+                    Web Developer
+                </motion.h1>
             </div>
-        </div>
-</RevealOnScroll>
-    </section>
-}
+
+            {/* Description Section */}
+            <div
+                className="absolute bottom-20 md:bottom-10 right-5 md:right-10 text-right max-w-full md:max-w-xl px-4 md:px-0"
+                style={{
+                    color: "#ffffff",
+                }}
+            >
+                <motion.div
+                    initial={{ opacity: 0, y: 50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.4 }}
+                >
+                    <p className="text-base md:text-2xl tracking-wide">
+                        Hey there! I am a creative web developer based in the Netherlands. I love exploring new technologies and creating cool projects. I am always looking for new challenges and opportunities to learn and grow. Let's connect!
+                    </p>
+                </motion.div>
+            </div>
+        </section>
+    );
+};
