@@ -17,6 +17,7 @@ export const AboutPage = () => {
     ];
 
     const tools = [
+        { name: "Miro", level: 90 },
         { name: "Figma", level: 90 },
         { name: "Git", level: 80 },
     ];
